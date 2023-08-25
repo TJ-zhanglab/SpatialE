@@ -1,0 +1,19 @@
+Package: SpatialE
+Title: gene set spatial enrichment tool
+Version: 0.0.0.9000
+Authors@R: 
+    person("Li Jiahao", "Guo Jingyan", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Many diseases will influence specific spatial region of organ. To answer the question which spatial region will easily influenced by the disease,we developed this package fro enrichment analysis using entropy weight method. Entering the spatial transcriptomic data and target disease gene set, we can get the enrichment degree of this gene set in spatial region.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+        license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+LazyData: true
+Imports: dplyr , parallel , data.table
+Depends: R (>= 3.5.0)
+NeedsCompilation: no
+Packaged: 2023-08-25 10:49:18 UTC; guojingyan
+Author: Li Jiahao Guo Jingyan [aut, cre] (YOUR-ORCID-ID)
+Maintainer: Li Jiahao Guo Jingyan <first.last@example.com>
