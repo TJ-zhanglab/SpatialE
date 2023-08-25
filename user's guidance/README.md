@@ -74,7 +74,7 @@ cluster_spot_exp <- getClusteredExp(Mouse_Brain_ST_Demo, exp)
 gene_clustered_mean <- Clustered_mean_Exp(cluster_spot_exp)
 ```
 
-Below are the top 10 rows of `gene_clustered_mean` matrix, where each row represents a gene, each column represents a spatial cluster, and each matrix element represents the mean expression.
+Below are the top 5 rows of `gene_clustered_mean` matrix, where each row represents a gene, each column represents a spatial cluster, and each matrix element represents the mean expression.
 
 <table class="table table-responsive-{sm|md|lg|xl}" style="font-size: 1px; width: auto !important; ">
 
@@ -91,6 +91,7 @@ Below are the top 10 rows of `gene_clustered_mean` matrix, where each row repres
    <th style="text-align:right;"> cluster7 </th>
    <th style="text-align:right;"> cluster8 </th>
    <th style="text-align:right;"> cluster9 </th>
+   <th style="text-align:right;"> cluster10 </th>
   </tr>
  </thead>
 <tbody>
