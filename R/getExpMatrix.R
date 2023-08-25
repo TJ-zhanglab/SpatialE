@@ -13,6 +13,6 @@
 #' exp <- getExpMatrix(mouse_brain)
 
 getExpMatrix <- function(SeuratObject){
-  exp_matrix <- as.matrix(SeuratObject@assays$SCT@counts)
+  exp_matrix <- as.matrix(Mouse_Brain_ST_Demo@assays[["Spatial"]]@counts)
   return(exp_matrix)
 }
