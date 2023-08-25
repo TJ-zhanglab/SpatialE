@@ -8,7 +8,7 @@
 
 **SpatialE** is a gene set spatial enrichment tool that estimates the entropy weighted differential gene expression matrix at spatial clusters, and calculates the significance of how a predefined gene set is enriched to a spatial cluster (region) when compared to randomly sampling gene sets. We packaged it into a user-friendly generic R package. Combined with [Seurat](https://satijalab.org/seurat/index.html), we can determine the spatial region where a gene set or cell type is enriched.
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/Web Image/SpatialE Workflow.png" width="1000"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/Web Image/SpatialE workflow.png" width="1000"/>
 
 ## Installation
 
