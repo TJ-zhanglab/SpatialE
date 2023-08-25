@@ -35,7 +35,6 @@ We will use the ST data of a posterior coronal slice of mouse brain that was gen
 
 ```r
 data(Mouse_Brain_ST_Demo)
-force(Mouse_Brain_ST_Demo)
 ```
 
 ### Data preprocessing
@@ -45,7 +44,7 @@ It will return a Seurat object containing both the spot-level expression matrix 
 SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
 ```
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/web Image/" width="600"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/Web Image/SpatialE workflow.png" width="600"/>
 
 Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions. This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
 
