@@ -97,272 +97,73 @@ Below are the top 5 rows of `gene_clustered_mean` matrix, where each row represe
 <tbody>
   <tr>
    <td style="text-align:left;"> Xkr4 </td>
-   <td style="text-align:right;"> 0.1200000 </td>
-   <td style="text-align:right;"> 0.1422925 </td>
-   <td style="text-align:right;"> 0.1050228 </td>
-   <td style="text-align:right;"> 0.0691244 </td>
-   <td style="text-align:right;"> 0.0841121 </td>
-   <td style="text-align:right;"> 0.0693069 </td>
-   <td style="text-align:right;"> 0.0867347 </td>
-   <td style="text-align:right;"> 0.0736196 </td>
-   <td style="text-align:right;"> 0.1358025 </td>
-   <td style="text-align:right;"> 0.0666667 </td>
+   <td style="text-align:right;"> 0.05319149 </td>
+   <td style="text-align:right;"> 0.1066667 </td>
+   <td style="text-align:right;"> 0.0921659 </td>
+   <td style="text-align:right;"> 0.07978723 </td>
+   <td style="text-align:right;"> 0.09917355 </td>
+   <td style="text-align:right;"> 0.07586207 </td>
+   <td style="text-align:right;"> 0.144796380 </td>
+   <td style="text-align:right;"> 0.07361963 </td>
+   <td style="text-align:right;"> 0.12941176 </td>
+   <td style="text-align:right;"> 0.06666667 </td>
+   <td style="text-align:right;"> 0.13026820 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Gm19938 </td>
-   <td style="text-align:right;"> 0.1381818 </td>
-   <td style="text-align:right;"> 0.2094862 </td>
-   <td style="text-align:right;"> 0.0776256 </td>
-   <td style="text-align:right;"> 0.1152074 </td>
-   <td style="text-align:right;"> 0.1728972 </td>
-   <td style="text-align:right;"> 0.0940594 </td>
-   <td style="text-align:right;"> 0.1071429 </td>
-   <td style="text-align:right;"> 0.0920245 </td>
-   <td style="text-align:right;"> 0.1358025 </td>
-   <td style="text-align:right;"> 0.0962963 </td>
+   <td style="text-align:right;"> 0.09574468 </td>
+   <td style="text-align:right;"> 0.1650000 </td>
+   <td style="text-align:right;"> 0.0875576 </td>
+   <td style="text-align:right;"> 0.10638298 </td>
+   <td style="text-align:right;"> 0.13223140 </td>
+   <td style="text-align:right;"> 0.09310345 </td>
+   <td style="text-align:right;"> 0.144796380 </td>
+   <td style="text-align:right;"> 0.09202454 </td>
+   <td style="text-align:right;"> 0.14117647 </td>
+   <td style="text-align:right;"> 0.09629630 </td>
+   <td style="text-align:right;"> 0.14176245 </td> 
   </tr>
   <tr>
    <td style="text-align:left;"> Sox17 </td>
-   <td style="text-align:right;"> 0.1163636 </td>
-   <td style="text-align:right;"> 0.1778656 </td>
-   <td style="text-align:right;"> 0.1461187 </td>
-   <td style="text-align:right;"> 0.1013825 </td>
-   <td style="text-align:right;"> 0.1308411 </td>
-   <td style="text-align:right;"> 0.1287129 </td>
-   <td style="text-align:right;"> 0.1377551 </td>
-   <td style="text-align:right;"> 0.0920245 </td>
-   <td style="text-align:right;"> 0.1172840 </td>
-   <td style="text-align:right;"> 0.1555556 </td>
+   <td style="text-align:right;"> 0.13829787 </td>
+   <td style="text-align:right;"> 0.1650000 </td>
+   <td style="text-align:right;"> 0.1474654 </td>
+   <td style="text-align:right;"> 0.09574468 </td>
+   <td style="text-align:right;"> 0.13774105 </td>
+   <td style="text-align:right;"> 0.10689655 </td>
+   <td style="text-align:right;"> 0.167420814 </td>
+   <td style="text-align:right;"> 0.09202454 </td>
+   <td style="text-align:right;"> 0.12941176 </td>
+   <td style="text-align:right;"> 0.15555556 </td>
+   <td style="text-align:right;"> 0.14942529 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Mrpl15 </td>
-   <td style="text-align:right;"> 1.1563636 </td>
-   <td style="text-align:right;"> 1.1462451 </td>
-   <td style="text-align:right;"> 1.2557078 </td>
-   <td style="text-align:right;"> 1.3225806 </td>
-   <td style="text-align:right;"> 1.0046729 </td>
-   <td style="text-align:right;"> 1.0396040 </td>
-   <td style="text-align:right;"> 1.3877551 </td>
-   <td style="text-align:right;"> 1.2883436 </td>
-   <td style="text-align:right;"> 1.3827160 </td>
-   <td style="text-align:right;"> 1.2222222 </td>
+   <td style="text-align:right;"> 1.06382979 </td>
+   <td style="text-align:right;"> 1.2150000 </td>
+   <td style="text-align:right;"> 1.2949309 </td>
+   <td style="text-align:right;"> 1.44148936 </td>
+   <td style="text-align:right;"> 0.93388430 </td>
+   <td style="text-align:right;"> 1.23448276 </td>
+   <td style="text-align:right;"> 1.190045249 </td>
+   <td style="text-align:right;"> 1.28834356 </td>
+   <td style="text-align:right;"> 1.34705882 </td>
+   <td style="text-align:right;"> 1.22222222 </td>
+   <td style="text-align:right;"> 1.32950192 </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Lypla1 </td>
-   <td style="text-align:right;"> 0.5163636 </td>
-   <td style="text-align:right;"> 0.9960474 </td>
-   <td style="text-align:right;"> 0.5296804 </td>
-   <td style="text-align:right;"> 0.8801843 </td>
-   <td style="text-align:right;"> 0.5747664 </td>
-   <td style="text-align:right;"> 0.5594059 </td>
-   <td style="text-align:right;"> 0.7040816 </td>
-   <td style="text-align:right;"> 0.7177914 </td>
-   <td style="text-align:right;"> 0.8703704 </td>
-   <td style="text-align:right;"> 0.8370370 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tcea1 </td>
-   <td style="text-align:right;"> 1.5345455 </td>
-   <td style="text-align:right;"> 1.7628458 </td>
-   <td style="text-align:right;"> 1.6301370 </td>
-   <td style="text-align:right;"> 1.8202765 </td>
-   <td style="text-align:right;"> 1.5140187 </td>
-   <td style="text-align:right;"> 1.6930693 </td>
-   <td style="text-align:right;"> 1.6428571 </td>
-   <td style="text-align:right;"> 1.8220859 </td>
-   <td style="text-align:right;"> 1.8827160 </td>
-   <td style="text-align:right;"> 1.7851852 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Rgs20 </td>
-   <td style="text-align:right;"> 0.6981818 </td>
-   <td style="text-align:right;"> 0.1778656 </td>
-   <td style="text-align:right;"> 0.4703196 </td>
-   <td style="text-align:right;"> 0.6820276 </td>
-   <td style="text-align:right;"> 0.4158879 </td>
-   <td style="text-align:right;"> 0.4554455 </td>
-   <td style="text-align:right;"> 0.4336735 </td>
-   <td style="text-align:right;"> 0.8895706 </td>
-   <td style="text-align:right;"> 0.7839506 </td>
-   <td style="text-align:right;"> 0.7259259 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Atp6v1h </td>
-   <td style="text-align:right;"> 2.9781818 </td>
-   <td style="text-align:right;"> 3.3320158 </td>
-   <td style="text-align:right;"> 2.4657534 </td>
-   <td style="text-align:right;"> 4.4700461 </td>
-   <td style="text-align:right;"> 2.1869159 </td>
-   <td style="text-align:right;"> 2.5594059 </td>
-   <td style="text-align:right;"> 3.1326531 </td>
-   <td style="text-align:right;"> 3.2515337 </td>
-   <td style="text-align:right;"> 4.3271605 </td>
-   <td style="text-align:right;"> 4.1481481 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Oprk1 </td>
-   <td style="text-align:right;"> 0.0509091 </td>
-   <td style="text-align:right;"> 0.0276680 </td>
-   <td style="text-align:right;"> 0.4657534 </td>
-   <td style="text-align:right;"> 0.1428571 </td>
-   <td style="text-align:right;"> 0.0467290 </td>
-   <td style="text-align:right;"> 0.0148515 </td>
-   <td style="text-align:right;"> 0.2806122 </td>
-   <td style="text-align:right;"> 0.0245399 </td>
-   <td style="text-align:right;"> 0.5432099 </td>
-   <td style="text-align:right;"> 0.1111111 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Npbwr1 </td>
-   <td style="text-align:right;"> 0.0109091 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0867580 </td>
-   <td style="text-align:right;"> 0.0184332 </td>
-   <td style="text-align:right;"> 0.0093458 </td>
-   <td style="text-align:right;"> 0.0198020 </td>
-   <td style="text-align:right;"> 0.0255102 </td>
-   <td style="text-align:right;"> 0.0184049 </td>
-   <td style="text-align:right;"> 0.0679012 </td>
-   <td style="text-align:right;"> 0.0888889 </td>
-  </tr>
-</tbody>
-</table>
-
-<table class="table table-responsive-{sm|md|lg|xl}" style="font-size: 1px; width: auto !important; ">
- <thead>
-  <tr>
-   <th style="text-align:left;">   </th>
-   <th style="text-align:right;"> cluster10 </th>
-   <th style="text-align:right;"> cluster11 </th>
-   <th style="text-align:right;"> cluster12 </th>
-   <th style="text-align:right;"> cluster13 </th>
-   <th style="text-align:right;"> cluster14 </th>
-   <th style="text-align:right;"> cluster15 </th>
-   <th style="text-align:right;"> cluster16 </th>
-   <th style="text-align:right;"> cluster17 </th>
-   <th style="text-align:right;"> cluster18 </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> Xkr4 </td>
-   <td style="text-align:right;"> 0.1044776 </td>
-   <td style="text-align:right;"> 0.0769231 </td>
-   <td style="text-align:right;"> 0.1504425 </td>
-   <td style="text-align:right;"> 0.1590909 </td>
-   <td style="text-align:right;"> 0.0689655 </td>
-   <td style="text-align:right;"> 0.0909091 </td>
-   <td style="text-align:right;"> 0.0555556 </td>
-   <td style="text-align:right;"> 0.1000000 </td>
-   <td style="text-align:right;"> 0.1363636 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Gm19938 </td>
-   <td style="text-align:right;"> 0.1417910 </td>
-   <td style="text-align:right;"> 0.1923077 </td>
-   <td style="text-align:right;"> 0.1504425 </td>
-   <td style="text-align:right;"> 0.0795455 </td>
-   <td style="text-align:right;"> 0.0689655 </td>
-   <td style="text-align:right;"> 0.0545455 </td>
-   <td style="text-align:right;"> 0.1111111 </td>
-   <td style="text-align:right;"> 0.1333333 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Sox17 </td>
-   <td style="text-align:right;"> 0.1641791 </td>
-   <td style="text-align:right;"> 0.1538462 </td>
-   <td style="text-align:right;"> 0.1327434 </td>
-   <td style="text-align:right;"> 0.2045455 </td>
-   <td style="text-align:right;"> 0.0862069 </td>
-   <td style="text-align:right;"> 0.4545455 </td>
-   <td style="text-align:right;"> 0.0833333 </td>
-   <td style="text-align:right;"> 0.0666667 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Mrpl15 </td>
-   <td style="text-align:right;"> 1.3208955 </td>
-   <td style="text-align:right;"> 1.1461538 </td>
-   <td style="text-align:right;"> 1.3893805 </td>
-   <td style="text-align:right;"> 0.9545455 </td>
-   <td style="text-align:right;"> 0.9310345 </td>
-   <td style="text-align:right;"> 1.0363636 </td>
-   <td style="text-align:right;"> 1.4444444 </td>
-   <td style="text-align:right;"> 1.9333333 </td>
-   <td style="text-align:right;"> 1.7272727 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Lypla1 </td>
-   <td style="text-align:right;"> 0.5298507 </td>
-   <td style="text-align:right;"> 0.7307692 </td>
-   <td style="text-align:right;"> 0.7168142 </td>
-   <td style="text-align:right;"> 0.4318182 </td>
-   <td style="text-align:right;"> 1.0517241 </td>
-   <td style="text-align:right;"> 0.7272727 </td>
-   <td style="text-align:right;"> 0.8333333 </td>
-   <td style="text-align:right;"> 0.5666667 </td>
-   <td style="text-align:right;"> 0.5454545 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tcea1 </td>
-   <td style="text-align:right;"> 1.8283582 </td>
-   <td style="text-align:right;"> 1.7307692 </td>
-   <td style="text-align:right;"> 1.9734513 </td>
-   <td style="text-align:right;"> 1.6477273 </td>
-   <td style="text-align:right;"> 1.6379310 </td>
-   <td style="text-align:right;"> 2.0545455 </td>
-   <td style="text-align:right;"> 1.6388889 </td>
-   <td style="text-align:right;"> 2.0333333 </td>
-   <td style="text-align:right;"> 1.7727273 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Rgs20 </td>
-   <td style="text-align:right;"> 0.8582090 </td>
-   <td style="text-align:right;"> 0.3384615 </td>
-   <td style="text-align:right;"> 0.8495575 </td>
-   <td style="text-align:right;"> 0.6363636 </td>
-   <td style="text-align:right;"> 0.6206897 </td>
-   <td style="text-align:right;"> 0.5272727 </td>
-   <td style="text-align:right;"> 0.0833333 </td>
-   <td style="text-align:right;"> 0.2333333 </td>
-   <td style="text-align:right;"> 0.1818182 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Atp6v1h </td>
-   <td style="text-align:right;"> 2.5746269 </td>
-   <td style="text-align:right;"> 2.7769231 </td>
-   <td style="text-align:right;"> 3.7345133 </td>
-   <td style="text-align:right;"> 2.4772727 </td>
-   <td style="text-align:right;"> 1.9655172 </td>
-   <td style="text-align:right;"> 2.0545455 </td>
-   <td style="text-align:right;"> 4.2222222 </td>
-   <td style="text-align:right;"> 3.1666667 </td>
-   <td style="text-align:right;"> 1.5454545 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Oprk1 </td>
-   <td style="text-align:right;"> 0.1791045 </td>
-   <td style="text-align:right;"> 0.1615385 </td>
-   <td style="text-align:right;"> 0.1858407 </td>
-   <td style="text-align:right;"> 0.1136364 </td>
-   <td style="text-align:right;"> 0.1551724 </td>
-   <td style="text-align:right;"> 0.2000000 </td>
-   <td style="text-align:right;"> 0.0555556 </td>
-   <td style="text-align:right;"> 0.0333333 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Npbwr1 </td>
-   <td style="text-align:right;"> 0.0373134 </td>
-   <td style="text-align:right;"> 0.0076923 </td>
-   <td style="text-align:right;"> 0.0353982 </td>
-   <td style="text-align:right;"> 0.0227273 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
-   <td style="text-align:right;"> 0.0000000 </td>
+   <td style="text-align:right;"> 0.59574468 </td>
+   <td style="text-align:right;"> 0.8350000 </td>
+   <td style="text-align:right;"> 0.5391705 </td>
+   <td style="text-align:right;"> 0.91489362 </td>
+   <td style="text-align:right;"> 0.60881543 </td>
+   <td style="text-align:right;"> 0.59310345 </td>
+   <td style="text-align:right;"> 0.533936652 </td>
+   <td style="text-align:right;"> 0.71779141 </td>
+   <td style="text-align:right;"> 0.85294118 </td>
+   <td style="text-align:right;"> 0.83703704 </td>
+   <td style="text-align:right;"> 0.60919540 </td>
   </tr>
 </tbody>
 </table>
@@ -376,7 +177,7 @@ We recommend setting the filter threshold to a value near the lower quartile (Q1
 ```r
 gene_clustered_max <- mutate(gene_clustered_mean, max = apply(gene_clustered_mean,1,max)) # Calculate row maximum and generate a new column for storage
 summary(gene_clustered_max$max) # View the distribution of maximum values
-gene_clustered_mean_filtered <- genefilter(gene_clustered_mean, threshhold = 0.2) # Set filter threshold
+gene_clustered_mean_filtered <- genefilter(gene_clustered_mean, threshhold = 0.1) # Set filter threshold
 
 nrow(gene_clustered_max) # Number of genes before filtering
 ```
@@ -390,10 +191,10 @@ nrow(gene_clustered_mean_filtered) # Number of genes after filtering
 ```
 
 ```
-## [1] 13211
+## [1] 13471
 ```
 
-There are 18,768 genes in total, 5,557 genes will be filtered and 13,211 genes will be left.<br>
+There are 18,768 genes in total, 5,279 genes will be filtered and 13,471 genes will be left.<br>
 <br>
 <details>
   <summary> Why is the value near the lower quartile set as the filter threshold? </summary>
@@ -480,26 +281,24 @@ rownames(delta) <- delta$gene
 You can type `?function name()` to learn more about functions. Check the column information of `delta` matrix, and you will find the corresponding weight of gene is added to the last column.
 
 ```
-##  [1] "cluster0"  "cluster1"  "cluster2"  "cluster3"  "cluster4"  "cluster5" 
-##  [7] "cluster6"  "cluster7"  "cluster8"  "cluster9" "cluster10" "cluster11"
-## [13] "cluster12" "cluster13" "cluster14" "cluster15" "cluster16" "cluster17"
-## [19] "cluster18" "gene"      "weight"
+ [1] "cluster1"  "cluster2"  "cluster3"  "cluster4"  "cluster5"  "cluster6"  "cluster7"  "cluster8" 
+ [9] "cluster9"  "cluster10" "cluster11" "gene"      "weight" 
 ```
 ### Importing gene set(s) of interest and conducting spatial enrichment analysis
 
 In this step, we will perform spatial enrichment analysis on the gene set(s) of interest, which may be marker gene sets of various cell types, or any gene set of interest (for example, disease related gene sets). Please provide the gene set(s) in **vector** format.
 
-Here, we will demonstrate the process using the SpatiaE's built-in data sets. As demonstrated below, you can directly load them using `data("manual 76k")` and `data("AD_Marioni_plus")` functions.
+Here, we will demonstrate the process using the SpatiaE's built-in data sets. As demonstrated below, you can directly load them using `data(cell_type_marker_genes)` and `data(ALS_genes)` functions.
 
-<font size=3.5>**1 The manual_76k**</font>. This data object is a dataframe that contains marker genes of two cell types: *Layer6 Intra Telencephalic Isocortex(L6 IT CTX)* and *Oligodendrocyte*, the corresponding p values and adjusted p values. It is a single cell transcriptome data of mouse brain tissue published on the [Allen Brain Map website](http://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-smart-seq). We obtainded these marker genes by using `FindAllMarkers()` function in [Seurat](https://satijalab.org/seurat/index.html).<br> 
+<font size=3.5>**1 cell_type_marker_genes **</font>. This data object is a dataframe that contains marker genes of two cell types: *Layer6 Intra Telencephalic Isocortex(L6 IT CTX)* and *Oligodendrocyte*, the corresponding p values and adjusted p values. It is a single cell transcriptome data of mouse brain tissue published on the [Allen Brain Map website](http://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-smart-seq). We obtainded these marker genes by using `FindAllMarkers()` function in [Seurat](https://satijalab.org/seurat/index.html).<br> 
 <br>
-<font size=3.5>**2 The AD_Marioni_plus**</font>. This data object is a vector that contains 140 genes related to Alzheimer's disease. Please refer to Supplementary Table 1 of paper for detailed data sources.<br>
+<font size=3.5>**2 ALS_genes **</font>. This data object is a vector that contains 260 genes related to Amyotrophic lateral sclerosis. Please refer to Table. S7 of paper for detailed data sources.<br>
 
 Loading the gene set.
 ```r
-data("manual_76k") #or data("AD_Marioni_plus")
+data(cell_type_marker_genes) #or data(ALS_genes)
 ```
-The data structure of the **manual_76k** is shown as below (only the top 5 rows).
+The data structure of the **ell_type_marker_genes** is shown as below (only the top 5 rows).
 
 
 <table class="table table-responsive-{sm|md|lg|xl" style="font-size: 5px; width: auto !important; margin-left: auto; margin-right: auto;">
