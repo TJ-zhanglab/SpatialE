@@ -31,38 +31,21 @@ library(SpatialE)
 ## Step2: Preparing the ST Seurat object 
 
 ### Dataset
-We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots. You can click [here](https://github.com/TJ-zhanglab/SpatialE/raw/main/Example/Data/Mouse_Brain_ST_Demo.zip) or use the following command to download it.
+We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots. You can click [here](https://github.com/TJ-zhanglab/SpatialE/raw/main/data/Mouse_Brain_ST_Demo.rda) or use the following command to load it.
 
 ```r
-download.file("https://github.com/TJ-zhanglab/SpatialE/raw/main/Example/Data/Mouse_Brain_ST_Demo.zip",destfile="/Users/path/Mouse_Brain_ST_Demo.zip") # Download data."/Users/path/Mouse_Brain_ST_Demo.zip" is the file path where the downloaded file is to be saved
+data(Mouse_Brain_ST_Demo)
+force(Mouse_Brain_ST_Demo)
 ```
-Load and unzip the file after downloading.
-
-```r
-load(unzip("/Users/path/Mouse_Brain_ST_Demo.zip")) #Load the zip file
-
-# The unzip file will be automatically generated in the current path, with the name of 'mouse_brain.rda'
-
-load("/Users/path/mouse_brain.rda") #Load the unzip file
-```
-
-It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice.
 
 ### Data preprocessing
-In ST data, it is critical to consider the large variability of molecular counts per spot. The **counts** here refer to the number of reads compared to a given genome reference region. We will use the `SCTransform()` function in [Seurat](https://satijalab.org/seurat/index.html) to standardize the spatial expression matrix, and further conduct dimensionality reduction and clustering based on the standardized expression matrix. Please also refer to the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html).
+It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice. We referred the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the clustering results in the built-in dataset of SpatialE. We can use the `SpatialFeaturePlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the preprocessed results.
+
 ```r
-mouse_brain <- SCTransform(mouse_brain, assay = "Spatial") %>%
-  RunPCA(assay = "SCT", verbose = FALSE) %>%
-  FindNeighbors(reduction = "pca", dims = 1:50) %>%
-  FindClusters(resolution = 1) %>%
-  RunUMAP(reduction = "pca", dims = 1:50) 
-```
-We can use the `SpatialFeaturePlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the preprocessed results.
-```r
-SpatialDimPlot(mouse_brain, label = T, label.size = 3)
+SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
 ```
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/PNG/spatialdimplot.png" width="600"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/web Image/" width="600"/>
 
 Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions. This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
 
