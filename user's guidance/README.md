@@ -44,7 +44,7 @@ It will return a Seurat object containing both the spot-level expression matrix 
 SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
 ```
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/Web Image/SpatialE workflow.png" width="600"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/SpatialDimPlot.png" width="600"/>
 
 Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions. This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
 
@@ -55,7 +55,7 @@ SpatialE is a tool to analyze the enrichment of a target/predefined gene set (ca
 Firstly, we will use the `getExpMatrix()` function in SpatialE to get the preprocessed ST expression matrix from the Seurat object, where each row represents a gene, and each column represents a spatial spot.
 
 ```r
-exp <- getExpMatrix(mouse_brain)
+exp <- getExpMatrix(Mouse_Brain_ST_Demo)
 str(exp)
 ```
 
@@ -70,7 +70,7 @@ From the result of `str(exp)`, we can know that preprocessed Seurat object conta
 
 
 ```r
-cluster_spot_exp <- getClusteredExp(mouse_brain, exp)
+cluster_spot_exp <- getClusteredExp(Mouse_Brain_ST_Demo, exp)
 gene_clustered_mean <- Clustered_mean_Exp(cluster_spot_exp)
 ```
 
