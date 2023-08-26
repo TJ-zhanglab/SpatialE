@@ -286,15 +286,15 @@ In this step, we will perform spatial enrichment analysis on the gene set(s) of 
 
 Here, we will demonstrate the process using the SpatiaE's built-in data sets. As demonstrated below, you can directly load them using `data(cell_type_marker_genes)` and `data(ALS_genes)` functions.
 
-<font size=3.5>**1 cell_type_marker_genes **</font>. This data object is a dataframe that contains marker genes of two cell types: *Layer6 Intra Telencephalic Isocortex(L6 IT CTX)* and *Oligodendrocyte*, the corresponding p values and adjusted p values. It is a single cell transcriptome data of mouse brain tissue published on the [Allen Brain Map website](http://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-smart-seq). We obtainded these marker genes by using `FindAllMarkers()` function in [Seurat](https://satijalab.org/seurat/index.html).<br> 
+<font size=3.5>**1 cell_type_marker_genes**</font>. This data object is a dataframe that contains marker genes of two cell types: *Layer6 Intra Telencephalic Isocortex(L6 IT CTX)* and *Oligodendrocyte (oligo)*, the corresponding p values and adjusted p values. It is a single cell transcriptome data of mouse brain tissue published on the [Allen Brain Map website](http://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-smart-seq). We obtainded these marker genes by using `FindAllMarkers()` function in [Seurat](https://satijalab.org/seurat/index.html).<br> 
 <br>
-<font size=3.5>**2 ALS_genes **</font>. This data object is a vector that contains 260 genes related to Amyotrophic lateral sclerosis. Please refer to Table. S7 of paper for detailed data sources.<br>
+<font size=3.5>**2 ALS_genes**</font>. This data object is a vector that contains 260 genes related to Amyotrophic lateral sclerosis. Please refer to **Table. S7** of paper for detailed data sources.<br>
 
 Loading the gene set.
 ```r
 data(cell_type_marker_genes) #or data(ALS_genes)
 ```
-The data structure of the **ell_type_marker_genes** is shown as below (only the top 5 rows).
+The data structure of the **cell_type_marker_genes** is shown as below (only the top 5 rows).
 
 
 <table class="table table-responsive-{sm|md|lg|xl" style="font-size: 5px; width: auto !important; margin-left: auto; margin-right: auto;">
@@ -340,10 +340,10 @@ The data structure of the **ell_type_marker_genes** is shown as below (only the 
 </tbody>
 </table>  
 
-Here we will take **L6 IT CTX** cell type in the **manual_76k** dataset as an example to demonstrate how to perform the spatial enrichment analysis.
+Here we will take **L6 IT CTX** cell type in the **cell_type_marker_genes** dataset as an example to demonstrate how to perform the spatial enrichment analysis.
 
 ```r
-target_geneset <- manual_76k[manual_76k$cluster=='L6 IT CTX',] 
+target_geneset <- cell_type_marker_genes[cell_type_marker_genes$cluster=='L6 IT CTX',] 
 ```
 
 According to p_val_adj sort values, the top 200 genes will be selected for the next analysis (see below for details on why the top 200 genes were chosen).
@@ -424,220 +424,141 @@ You can type `?function name()` to learn more about functions. The `enrichment_o
   <tr>
    <td style="text-align:left;font-weight: bold;color: red !important;text-align: center;"> 9 </td>
    <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 9999 </td>
-   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.9999 </td>
-   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0001 </td>
+   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.9996 </td>
+   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0004 </td>
    <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 8 </td>
-   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0019000 </td>
-   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0019 </td>
-   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 2.7212464 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 17 </td>
-   <td style="text-align:right;text-align: center;"> 9908 </td>
-   <td style="text-align:right;text-align: center;"> 0.9908 </td>
-   <td style="text-align:right;text-align: center;"> 0.0092 </td>
-   <td style="text-align:right;text-align: center;"> 16 </td>
-   <td style="text-align:right;text-align: center;"> 0.0874000 </td>
-   <td style="text-align:right;text-align: center;"> 0.1748 </td>
-   <td style="text-align:right;text-align: center;"> 0.7574586 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 13 </td>
-   <td style="text-align:right;text-align: center;"> 9699 </td>
-   <td style="text-align:right;text-align: center;"> 0.9699 </td>
-   <td style="text-align:right;text-align: center;"> 0.0301 </td>
-   <td style="text-align:right;text-align: center;"> 12 </td>
-   <td style="text-align:right;text-align: center;"> 0.1562750 </td>
-   <td style="text-align:right;text-align: center;"> 0.5719 </td>
-   <td style="text-align:right;text-align: center;"> 0.2426799 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 18 </td>
-   <td style="text-align:right;text-align: center;"> 9671 </td>
-   <td style="text-align:right;text-align: center;"> 0.9671 </td>
-   <td style="text-align:right;text-align: center;"> 0.0329 </td>
-   <td style="text-align:right;text-align: center;"> 17 </td>
-   <td style="text-align:right;text-align: center;"> 0.1562750 </td>
-   <td style="text-align:right;text-align: center;"> 0.6251 </td>
-   <td style="text-align:right;text-align: center;"> 0.2040505 </td>
+   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0044000 </td>
+   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 0.0044 </td>
+   <td style="text-align:right;font-weight: bold;color: red !important;text-align: center;"> 2.3565473 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 8 </td>
-   <td style="text-align:right;text-align: center;"> 9512 </td>
-   <td style="text-align:right;text-align: center;"> 0.9512 </td>
-   <td style="text-align:right;text-align: center;"> 0.0488 </td>
+   <td style="text-align:right;text-align: center;"> 9415 </td>
+   <td style="text-align:right;text-align: center;"> 0.9415 </td>
+   <td style="text-align:right;text-align: center;"> 0.0585 </td>
    <td style="text-align:right;text-align: center;"> 7 </td>
-   <td style="text-align:right;text-align: center;"> 0.1854400 </td>
-   <td style="text-align:right;text-align: center;"> 0.9272 </td>
-   <td style="text-align:right;text-align: center;"> 0.0328266 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 15 </td>
-   <td style="text-align:right;text-align: center;"> 9160 </td>
-   <td style="text-align:right;text-align: center;"> 0.9160 </td>
-   <td style="text-align:right;text-align: center;"> 0.0840 </td>
-   <td style="text-align:right;text-align: center;"> 14 </td>
-   <td style="text-align:right;text-align: center;"> 0.2460500 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
+   <td style="text-align:right;text-align: center;"> 0.2442000 </td>
+   <td style="text-align:right;text-align: center;"> 0.6435 </td>
+   <td style="text-align:right;text-align: center;"> 0.1914514 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 4 </td>
-   <td style="text-align:right;text-align: center;"> 8976 </td>
-   <td style="text-align:right;text-align: center;"> 0.8976 </td>
-   <td style="text-align:right;text-align: center;"> 0.1024 </td>
+   <td style="text-align:right;text-align: center;"> 9162 </td>
+   <td style="text-align:right;text-align: center;"> 0.9162 </td>
+   <td style="text-align:right;text-align: center;"> 0.0838 </td>
    <td style="text-align:right;text-align: center;"> 3 </td>
-   <td style="text-align:right;text-align: center;"> 0.2460500 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
+   <td style="text-align:right;text-align: center;"> 0.2442000 </td>
+   <td style="text-align:right;text-align: center;"> 0.9218 </td>
+   <td style="text-align:right;text-align: center;"> 0.0353633 </td>
   </tr>
   <tr>
-   <td style="text-align:left;text-align: center;"> 1 </td>
-   <td style="text-align:right;text-align: center;"> 8794 </td>
-   <td style="text-align:right;text-align: center;"> 0.8794 </td>
-   <td style="text-align:right;text-align: center;"> 0.1206 </td>
-   <td style="text-align:right;text-align: center;"> 0 </td>
-   <td style="text-align:right;text-align: center;"> 0.2460500 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 19 </td>
-   <td style="text-align:right;text-align: center;"> 8719 </td>
-   <td style="text-align:right;text-align: center;"> 0.8719 </td>
-   <td style="text-align:right;text-align: center;"> 0.1281 </td>
-   <td style="text-align:right;text-align: center;"> 18 </td>
-   <td style="text-align:right;text-align: center;"> 0.2460500 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 10 </td>
-   <td style="text-align:right;text-align: center;"> 8705 </td>
-   <td style="text-align:right;text-align: center;"> 0.8705 </td>
-   <td style="text-align:right;text-align: center;"> 0.1295 </td>
-   <td style="text-align:right;text-align: center;"> 9 </td>
-   <td style="text-align:right;text-align: center;"> 0.2460500 </td>
+   <td style="text-align:left;text-align: center;"> 6 </td>
+   <td style="text-align:right;text-align: center;"> 9045 </td>
+   <td style="text-align:right;text-align: center;"> 0.9045 </td>
+   <td style="text-align:right;text-align: center;"> 0.0955 </td>
+   <td style="text-align:right;text-align: center;"> 5 </td>
+   <td style="text-align:right;text-align: center;"> 0.2442000 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 7 </td>
-   <td style="text-align:right;text-align: center;"> 8402 </td>
-   <td style="text-align:right;text-align: center;"> 0.8402 </td>
-   <td style="text-align:right;text-align: center;"> 0.1598 </td>
+   <td style="text-align:right;text-align: center;"> 8890 </td>
+   <td style="text-align:right;text-align: center;"> 0.8890 </td>
+   <td style="text-align:right;text-align: center;"> 0.1110 </td>
    <td style="text-align:right;text-align: center;"> 6 </td>
-   <td style="text-align:right;text-align: center;"> 0.2760182 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 16 </td>
-   <td style="text-align:right;text-align: center;"> 7468 </td>
-   <td style="text-align:right;text-align: center;"> 0.7468 </td>
-   <td style="text-align:right;text-align: center;"> 0.2532 </td>
-   <td style="text-align:right;text-align: center;"> 15 </td>
-   <td style="text-align:right;text-align: center;"> 0.4009000 </td>
+   <td style="text-align:right;text-align: center;"> 0.2442000 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 11 </td>
-   <td style="text-align:right;text-align: center;"> 7126 </td>
-   <td style="text-align:right;text-align: center;"> 0.7126 </td>
-   <td style="text-align:right;text-align: center;"> 0.2874 </td>
+   <td style="text-align:right;text-align: center;"> 8371 </td>
+   <td style="text-align:right;text-align: center;"> 0.8371 </td>
+   <td style="text-align:right;text-align: center;"> 0.1629 </td>
    <td style="text-align:right;text-align: center;"> 10 </td>
-   <td style="text-align:right;text-align: center;"> 0.4200462 </td>
+   <td style="text-align:right;text-align: center;"> 0.2975500 </td>
+   <td style="text-align:right;text-align: center;"> 1.0000 </td>
+   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;text-align: center;"> 10 </td>
+   <td style="text-align:right;text-align: center;"> 7983 </td>
+   <td style="text-align:right;text-align: center;"> 0.7983 </td>
+   <td style="text-align:right;text-align: center;"> 0.2017 </td>
+   <td style="text-align:right;text-align: center;"> 9 </td>
+   <td style="text-align:right;text-align: center;"> 0.2975500 </td>
+   <td style="text-align:right;text-align: center;"> 1.0000 </td>
+   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;text-align: center;"> 1 </td>
+   <td style="text-align:right;text-align: center;"> 7836 </td>
+   <td style="text-align:right;text-align: center;"> 0.7836 </td>
+   <td style="text-align:right;text-align: center;"> 0.2164 </td>
+   <td style="text-align:right;text-align: center;"> 0 </td>
+   <td style="text-align:right;text-align: center;"> 0.2975500 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 5 </td>
-   <td style="text-align:right;text-align: center;"> 6731 </td>
-   <td style="text-align:right;text-align: center;"> 0.6731 </td>
-   <td style="text-align:right;text-align: center;"> 0.3269 </td>
+   <td style="text-align:right;text-align: center;"> 6689 </td>
+   <td style="text-align:right;text-align: center;"> 0.6689 </td>
+   <td style="text-align:right;text-align: center;"> 0.3311 </td>
    <td style="text-align:right;text-align: center;"> 4 </td>
-   <td style="text-align:right;text-align: center;"> 0.4436500 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 6 </td>
-   <td style="text-align:right;text-align: center;"> 6300 </td>
-   <td style="text-align:right;text-align: center;"> 0.6300 </td>
-   <td style="text-align:right;text-align: center;"> 0.3700 </td>
-   <td style="text-align:right;text-align: center;"> 5 </td>
-   <td style="text-align:right;text-align: center;"> 0.4686667 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 14 </td>
-   <td style="text-align:right;text-align: center;"> 5543 </td>
-   <td style="text-align:right;text-align: center;"> 0.5543 </td>
-   <td style="text-align:right;text-align: center;"> 0.4457 </td>
-   <td style="text-align:right;text-align: center;"> 13 </td>
-   <td style="text-align:right;text-align: center;"> 0.5292687 </td>
-   <td style="text-align:right;text-align: center;"> 1.0000 </td>
-   <td style="text-align:right;text-align: center;"> 0.0000000 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;text-align: center;"> 2 </td>
-   <td style="text-align:right;text-align: center;"> 4957 </td>
-   <td style="text-align:right;text-align: center;"> 0.4957 </td>
-   <td style="text-align:right;text-align: center;"> 0.5043 </td>
-   <td style="text-align:right;text-align: center;"> 1 </td>
-   <td style="text-align:right;text-align: center;"> 0.5606056 </td>
+   <td style="text-align:right;text-align: center;"> 0.4046778 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
   <tr>
    <td style="text-align:left;text-align: center;"> 3 </td>
-   <td style="text-align:right;text-align: center;"> 4689 </td>
-   <td style="text-align:right;text-align: center;"> 0.4689 </td>
-   <td style="text-align:right;text-align: center;"> 0.5311 </td>
+   <td style="text-align:right;text-align: center;"> 5649 </td>
+   <td style="text-align:right;text-align: center;"> 0.5649 </td>
+   <td style="text-align:right;text-align: center;"> 0.4351 </td>
    <td style="text-align:right;text-align: center;"> 2 </td>
-   <td style="text-align:right;text-align: center;"> 0.5606056 </td>
+   <td style="text-align:right;text-align: center;"> 0.4786100 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
   <tr>
-   <td style="text-align:left;text-align: center;"> 12 </td>
-   <td style="text-align:right;text-align: center;"> 1107 </td>
-   <td style="text-align:right;text-align: center;"> 0.1107 </td>
-   <td style="text-align:right;text-align: center;"> 0.8893 </td>
-   <td style="text-align:right;text-align: center;"> 11 </td>
-   <td style="text-align:right;text-align: center;"> 0.8893000 </td>
+   <td style="text-align:left;text-align: center;"> 2 </td>
+   <td style="text-align:right;text-align: center;"> 3049 </td>
+   <td style="text-align:right;text-align: center;"> 0.3049 </td>
+   <td style="text-align:right;text-align: center;"> 0.6951 </td>
+   <td style="text-align:right;text-align: center;"> 1 </td>
+   <td style="text-align:right;text-align: center;"> 0.6951000 </td>
    <td style="text-align:right;text-align: center;"> 1.0000 </td>
    <td style="text-align:right;text-align: center;"> 0.0000000 </td>
   </tr>
 </tbody>
 </table>
 
-The **pval** (p value) indicates that the target gene set (L6 IT CTX) is significantly enriched to the 8, 16, 12, 17, and 7 clusters. More precisely, refer to the **bonferroni** (adjusted p value), the target gene set is significantly enriched in the cluster 8 (pval less than 0.05 is significant). However, should L6 IT CTX cell types be located within cluster 8? We recommend conducting the following visualization analysis to determine the accuracy of enrichment results.<br>
+The **pval** (p value) and **bonferroni** (adjusted p value) indicate that the target gene set (L6 IT CTX) is significantly enriched to the cluster 8 (pval less than 0.05 is significant). However, should L6 IT CTX cell types be located within cluster 8? We recommend conducting the following visualization analysis to determine the accuracy of enrichment results.<br>
 
 ## Step4: Visualizing spatial enrichment results
 
 Using the `SpatialFeaturePlot()` function in [Seurat](https://satijalab.org/seurat/index.html), we can visualize the enrichment results of SpatialE in order to better comprehend their biological significance.
 
-We will compare the SpatialE with the [SPOTlight](https://marcelosua.github.io/SPOTlight/) and [MIA](https://pubmed.ncbi.nlm.nih.gov/31932730/) (Multimodal intersection analysis).The analysis results of SPOTlight and MIA have been packaged in SpatialE.
+We will compare the SpatialE with the [MIA](https://pubmed.ncbi.nlm.nih.gov/31932730/), [SPOTlight](https://marcelosua.github.io/SPOTlight/) and [CARD](https://yingma0107.github.io/CARD).The analysis results of MIA, SPOTlight and CARD have been packaged in SpatialE.
 
 ```r
-spot_info <- mouse_brain@meta.data
+spot_info <- Mouse_Brain_ST_Demo@meta.data
 spot_info[1,ncol(spot_info)+1] <- NA
 colnames(spot_info)[ncol(spot_info)] <- 'SpatialE_L6_IT_CTX' # Enter the name you want to define
-for (i in 1:length(levels(spot_info$seurat_clusters))) {
-  for (j in 1:length(spot_info$seurat_clusters)) {
-    if (spot_info$seurat_clusters[j] == enrichment_output$cluster[i]) {
+spot_info$cluster <- as.factor(spot_info$cluster)
+for (i in 1:length(levels(spot_info$cluster))) {
+  for (j in 1:length(spot_info$cluster)) {
+    if (spot_info$cluster[j] == enrichment_output$cluster[i]) {
       spot_info[j,ncol(spot_info)] <- enrichment_output$graphdata[i]
     }
   }
 }
-mouse_brain@meta.data <- spot_info
-SpatialFeaturePlot(mouse_brain, features = c('SpatialE_L6_IT_CTX','SPOTlight_L6_IT_CTX','MIA_L6_IT_CTX'), alpha = c(0.3,1))
+Mouse_Brain_ST_Demo@meta.data <- spot_info
+SpatialFeaturePlot(Mouse_Brain_ST_Demo, features = c('SpatialE_L6_IT_CTX','MIA_L6_IT_CTX','SPOTlight_L6_IT_CTX',"CARD_L6_IT_CTX"), alpha = c(0.3,1),ncol = 4)
 ```
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/PNG/mapping_results.png" width="1000"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/Enrichment_benchmark.png?raw=true" width="1200"/>
 
-Referring to the [Allen Brain map](http://atlas.brain-map.org/atlas?atlas=1#atlas=1&structure=12998&resolution=16.75&x=5536&y=4146&zoom=-4&plate=100960236&z=5), we can conclude that SpatialE correctly mapped l6 IT CTX cell type to the L6 cortex in the coronal slice of the mouse brain. SPOTlight demonstrated that it would be enriched to the hippocampus and hypothalamus. MIA showed that it was significantly enriched in L2/3 cortex besides L6 cortex. SpatialE achieves more specific and accurate enrichment results than the other two methods.<br>
+Referring to the [Allen Brain map](http://atlas.brain-map.org/atlas?atlas=1#atlas=1&structure=12998&resolution=16.75&x=5536&y=4146&zoom=-4&plate=100960236&z=5), we can conclude that SpatialE correctly mapped l6 IT CTX cell type to the L6 cortex in the coronal slice of the mouse brain. MIA unspecifically enriched L6_IT_CTX to regions such as L2/3 cortex, hippocampus, striatum and amygdala. SPOTlight incorrectly showed higher cell abundance deconvolution results in the hippocampus and hypothalamus. CARD showed higher cell abundance deconvolution in the L6 cortex, but also showed some non-specificity in other cortical and hippocampal regions. SpatialE achieves more specific and accurate enrichment results than the other three methods.<br>
 
