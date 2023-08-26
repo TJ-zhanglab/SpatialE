@@ -32,7 +32,7 @@ install_github("https://github.com/TJ-zhanglab/SpatialE.git")
 
 ## Usage
 
-SpatialE includes built-in datasets for easy accessibility. After installation, refer to the **`Example`** for usage instructions.
+SpatialE includes built-in datasets for easy accessibility. After installation, refer to the **`User's guidance`** for usage instructions.
 
 ## Issues
 
