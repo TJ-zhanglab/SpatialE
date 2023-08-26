@@ -12,7 +12,7 @@
 
 ```r
 install.packages("devtools")
-library(devtools) ## Install dependencies from GitHub source
+library(devtools) ## Install dependencies
 
 options(timeout=9999999) ## Set a lengthy timeout for the SpatialE download.
 install_github("https://github.com/TJ-zhanglab/SpatialE.git")
