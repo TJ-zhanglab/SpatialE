@@ -28,14 +28,13 @@ library(SpatialE)
 ```
 ## Step2: Preparing the ST Seurat object 
 
-We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots. We have included it as a built-in dataset in SpatialE, and it can be imported directly.
+We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots before quality control. We used the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the preprocessed results in SpatialE's built-in dataset `Mouse_Brain_ST_Demo` (**Note:** If the input is the original ST count expression matrix, it should be processed into a Seurat object according to the [Seurat](https://satijalab.org/seurat/index.html), and the corresponding dimensionality reduction and clustering processing should be performed to obtain a Seurat object like `Mouse_Brain_ST_Demo`). It can be imported directly:
 
 ```r
 data(Mouse_Brain_ST_Demo)
 ```
 
-It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice. We used the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the clustering results in the `Mouse_Brain_ST_Demo` (**Note:** If the input is the original ST count expression matrix, it should be processed into a Seurat object according to the [Seurat](https://satijalab.org/seurat/index.html), and the corresponding dimensionality reduction and clustering processing should be performed to obtain a Seurat object like `Mouse_Brain_ST_Demo`)
-We can use the `SpatialDimPlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the clustering results.
+It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice. We can use the `SpatialDimPlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the clustering results.
 
 ```r
 SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
