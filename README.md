@@ -24,7 +24,7 @@ install_github("https://github.com/TJ-zhanglab/SpatialE.git")
 
 **`User's guidance`**: A demonstration of how to use SpatialE
 
-**`Web Image`**: The directory contains README image files (only for Github website display)
+**`Web Image`**: The directory contains image files (only for Github website display)
 
 **`data`**: Data used in the **`User's guidance`**
 
