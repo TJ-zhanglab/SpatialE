@@ -34,7 +34,7 @@ We will use the ST data of a posterior coronal slice of mouse brain that was gen
 data(Mouse_Brain_ST_Demo)
 ```
 
-It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice. We referred the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the clustering results in the built-in dataset of SpatialE. We can use the `SpatialDimPlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the preprocessed results.
+It will return a Seurat object containing both the spot-level expression matrix and the associated image of the tissue slice. We referred the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the clustering results in the built-in dataset of SpatialE. We can use the `SpatialDimPlot()` function in [Seurat](https://satijalab.org/seurat/index.html) to visualize the clustering results.
 
 ```r
 SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
