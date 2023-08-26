@@ -12,7 +12,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 LazyData: true
 Imports: dplyr , parallel , data.table
-Depends: R (>= 3.5.0)
+Depends: R (>= 2.1.0)
 NeedsCompilation: no
 Packaged: 2023-08-26 01:57:39 UTC; guojingyan
 Author: Jingyan Guo, Jiahao Li [aut, cre] (YOUR-ORCID-ID)
