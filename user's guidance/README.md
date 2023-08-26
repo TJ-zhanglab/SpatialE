@@ -31,7 +31,7 @@ library(SpatialE)
 ## Step2: Preparing the ST Seurat object 
 
 ### Dataset
-We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots. You can click [here](https://github.com/TJ-zhanglab/SpatialE/raw/main/data/Mouse_Brain_ST_Demo.rda) or use the following command to load it.
+We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots. We packaged it in the SpatialE, which can be imported directly:
 
 ```r
 data(Mouse_Brain_ST_Demo)
