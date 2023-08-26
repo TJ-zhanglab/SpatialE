@@ -540,7 +540,7 @@ The **pval** (p value) and **bonferroni** (adjusted p value) indicate that the t
 
 Using the `SpatialFeaturePlot()` function in [Seurat](https://satijalab.org/seurat/index.html), we can visualize the enrichment results of SpatialE in order to better comprehend their biological significance.
 
-We will compare the SpatialE with the [MIA](https://pubmed.ncbi.nlm.nih.gov/31932730/), [SPOTlight](https://marcelosua.github.io/SPOTlight/) and [CARD](https://yingma0107.github.io/CARD).The analysis results of MIA, SPOTlight and CARD have been packaged in SpatialE.
+We also compare the SpatialE with the [MIA](https://pubmed.ncbi.nlm.nih.gov/31932730/), [SPOTlight](https://marcelosua.github.io/SPOTlight/) and [CARD](https://yingma0107.github.io/CARD).The analysis results of MIA, SPOTlight and CARD have been packaged in SpatialE.
 
 ```r
 spot_info <- Mouse_Brain_ST_Demo@meta.data
