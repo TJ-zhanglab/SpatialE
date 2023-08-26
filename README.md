@@ -1,7 +1,5 @@
 # Welcome to **`SpatialE`**!
 
-[![R >= 2.10](https://img.shields.io/badge/R-%3E%3D%202.10-brightgreen)](https://www.r-project.org/)
-
 <p align="center">
   <h3 align="center">SpatialE identifies spatial enrichment of amyotrophic lateral sclerosis genes in spatial transcriptomics</h3>
 </p>
@@ -14,21 +12,23 @@
 
 ```r
 install.packages("devtools")
-library(devtools)
+library(devtools) ## Install dependencies from GitHub source
 
-options(timeout=9999999) # Set a lengthy timeout for the SpatialE download.
+options(timeout=9999999) ## Set a lengthy timeout for the SpatialE download.
 install_github("https://github.com/TJ-zhanglab/SpatialE.git")
 ```
 
 ## Repository structure
 
-**`Example`**: A demonstration of how to use SpatialE, including **Data demo** and **User's guidance**.
-
 **`R`**: The directory contains scripts(.R) for SpatialE
 
-**`man`**: The directory contains scripts(.Rd) for SpatialE
+**`User's guidance`**: A demonstration of how to use SpatialE
 
 **`Web Image`**: The directory contains README image files (only for Github website display)
+
+**`data`**: Data used in the **`User's guidance`**
+
+**`man`**: The directory contains scripts(.Rd) for SpatialE
 
 ## Usage
 
