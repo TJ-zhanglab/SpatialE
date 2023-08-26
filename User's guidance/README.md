@@ -43,7 +43,7 @@ SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
 
 <img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/SpatialDimPlot.png" width="600"/>
 
-Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions. This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
+Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions (Fig. 2C of SpatialE paper). This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
 
 ## Step3: Running SpatialE
 SpatialE is a tool to analyze the enrichment of a target/predefined gene set (can be a set of cell type marker genes, representing specific cell type) to spatial regions of a tissue slice. It uses the **Entropy Weight Method** to assign different **weights** to different marker genes, which could be used to generate a specific spatial enrichment of specific cell types.
