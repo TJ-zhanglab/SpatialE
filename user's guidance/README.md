@@ -558,7 +558,7 @@ Mouse_Brain_ST_Demo@meta.data <- spot_info
 SpatialFeaturePlot(Mouse_Brain_ST_Demo, features = c('SpatialE_L6_IT_CTX','MIA_L6_IT_CTX','SPOTlight_L6_IT_CTX',"CARD_L6_IT_CTX"), alpha = c(0.3,1),ncol = 4)
 ```
 
-<img src="https://github.com/TJ-zhanglab/SpatialE/blob/main/PNG/mapping_results.png" width="1000"/>
+<img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/Enrichment_benchmark.png?raw=true" width="1200"/>
 
-Referring to the [Allen Brain map](http://atlas.brain-map.org/atlas?atlas=1#atlas=1&structure=12998&resolution=16.75&x=5536&y=4146&zoom=-4&plate=100960236&z=5), we can conclude that SpatialE correctly mapped l6 IT CTX cell type to the L6 cortex in the coronal slice of the mouse brain. SPOTlight demonstrated that it would be enriched to the hippocampus and hypothalamus. MIA showed that it was significantly enriched in L2/3 cortex besides L6 cortex. SpatialE achieves more specific and accurate enrichment results than the other two methods.<br>
+Referring to the [Allen Brain map](http://atlas.brain-map.org/atlas?atlas=1#atlas=1&structure=12998&resolution=16.75&x=5536&y=4146&zoom=-4&plate=100960236&z=5), we can conclude that SpatialE correctly mapped l6 IT CTX cell type to the L6 cortex in the coronal slice of the mouse brain. MIA unspecifically enriched L6_IT_CTX to regions such as L2/3 cortex, hippocampus, striatum and amygdala. SPOTlight incorrectly showed higher cell abundance deconvolution results in the hippocampus and hypothalamus. CARD showed higher cell abundance deconvolution in the L6 cortex, but also showed some non-specificity in other cortical and hippocampal regions. SpatialE achieves more specific and accurate enrichment results than the other three methods.<br>
 
