@@ -187,10 +187,10 @@ nrow(gene_clustered_mean_filtered) # Number of genes after filtering
 ```
 
 ```
-## [1] 13471
+## [1] 13417
 ```
 
-There are 18,768 genes in total, 5,279 genes will be filtered and 13,471 genes will be left.<br>
+There are 18,768 genes in total, 5,351 genes will be filtered and 13,417 genes will be left.<br>
 <br>
 <details>
   <summary> Why is the value near the lower quartile set as the filter threshold? </summary>
