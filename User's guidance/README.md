@@ -1,6 +1,6 @@
 # Welcome to **`SpatialE`**!
 
-Here, we demonstrate how to use SpatialE to analyze the enrichment of gene sets in Spatial Transcriptome (ST) data. The analysis process mainly includes the following parts.
+Here, we demonstrate how to use SpatialE to analyze the spatial enrichment of gene sets in Spatial Transcriptome (ST) data. The analysis mainly includes the following steps.
 
 - Loading the required R packages 
 - Preparing the ST Seurat object 
@@ -28,7 +28,7 @@ library(SpatialE)
 ```
 ## Step2: Preparing the ST Seurat object 
 
-We will use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots before quality control. We used the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the preprocessed results in SpatialE's built-in dataset `Mouse_Brain_ST_Demo` (**Note:** If the input is the original ST count expression matrix, it should be processed into a Seurat object according to the [Seurat](https://satijalab.org/seurat/index.html), and the corresponding dimensionality reduction and clustering processing should be performed to obtain a Seurat object like `Mouse_Brain_ST_Demo`). It can be imported directly:
+For demonstration, we use the ST data of a posterior coronal slice of mouse brain that was generated with the Visium technology from [10x Genomics](https://www.10xgenomics.com/resources/datasets?query=&page=1&configure%5Bfacets%5D%5B0%5D=chemistryVersionAndThroughput&configure%5Bfacets%5D%5B1%5D=pipeline.version&configure%5BhitsPerPage%5D=500&menu%5Bproducts.name%5D=Spatial%20Gene%20Expression#:~:text=Search-,Datasets,-Products), which contains the expression of 32,285 genes at 2,702 spatial spots before quality control. We used the data preprocessing workflow of [Seurat](https://satijalab.org/seurat/index.html) to perform dimension reduction and clustering on the ST data, and saved the preprocessed results in SpatialE's built-in dataset `Mouse_Brain_ST_Demo` (**Note:** If the input is the original ST count expression matrix, it should be processed into a Seurat object according to the [Seurat](https://satijalab.org/seurat/index.html), and the corresponding dimensionality reduction and clustering processing should be performed to obtain a Seurat object like `Mouse_Brain_ST_Demo`). It can be imported directly:
 
 ```r
 data(Mouse_Brain_ST_Demo)
@@ -42,10 +42,10 @@ SpatialDimPlot(Mouse_Brain_ST_Demo, label = T, label.size = 7)
 
 <img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/SpatialDimPlot.png" width="600"/>
 
-Different colors represent different clusters (idents) and correspond to different histological regions. We suggest that before the next step analysis, the parameters of data preprocessing, especially the spatial dimension reduction parameters, should be adjusted appropriately according to the known anatomical positions (**Fig. 2C** of SpatialE paper). This process is to ensure that the spatial clusters (idents) can well distinguish the histological positions.
+Different colors represent different clusters (idents) and correspond to different histological regions. We recommed to adjust the parameters of data preprocessing (especially the spatial dimension reduction parameters) appropriately according to the known anatomical positions (**Fig. 2C** of SpatialE paper). This process is to ensure that the spatial clusters (idents) can distinguish the histological positions properly.
 
 ## Step3: Running SpatialE
-SpatialE is a tool to analyze the enrichment of a target/predefined gene set (can be a set of cell type marker genes, representing specific cell type) to spatial regions of a tissue slice. It uses the **Entropy Weight Method** to assign different **weights** to different marker genes, which could be used to generate a specific spatial enrichment of specific cell types.
+SpatialE is a tool to analyze the enrichment of a target/predefined gene set (can be a set of cell type marker genes, representing specific cell type) to spatial regions of a tissue. It uses the **Entropy Weight Method** to assign different **weights** to different marker genes, which could be used to generate a specific spatial enrichment of specific cell types.
 
 ### Processing the ST expression matrix by clusters
 Firstly, we will use the `getExpMatrix()` function in SpatialE to get the preprocessed ST expression matrix from the Seurat object, where each row represents a gene, and each column represents a spatial spot.
