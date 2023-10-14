@@ -393,7 +393,7 @@ The reason for not using a fixed p value to determine the top number is that the
 </details>
 <br>
 
-**How to judge which cluster(s) is the predefined gene set significantly enriched to?**<br>
+**How to judge which cluster(s) is the target gene set significantly enriched to?**<br>
 
 In fact, not all genes in the predefined gene set are expressed in the ST data, so we first take the intersection of the predefined gene set and the ST data genes to get the `target gene set` and the corresponding `target_delta` matrix.
 
