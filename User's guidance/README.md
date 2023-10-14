@@ -401,7 +401,7 @@ In fact, not all genes in the target gene set are expressed in the ST data, so w
 target_delta <- delta[delta$gene %in% target_geneset$gene,]
 ```
 
-For which cluster(s) the target gene set is significantly enriched to, we define a judgment baseline, randomly sample 10,000 gene sets with the same length as the target gene set, construct their expression matrices, compare the sum of gene weighted expression between the target gene set and 10,000 random gene sets, and calculate the probability that the weighted sum of the target gene set is greater than the random gene sets.<br>
+For which cluster(s) the target gene set is significantly enriched to, we define a judgment baseline, randomly sample 10,000 gene sets with the same length as the target gene set, construct their expression matrices, compare the sum of weighted differential expression between the target gene set and 10,000 random gene sets, and calculate the probability that the weighted sum of the target gene set is greater than the random gene sets.<br>
 
 ```r
 target_gama <- getGama(target_delta, type = 'target') # Calculate the sum of weighted differential expression of target gene set
