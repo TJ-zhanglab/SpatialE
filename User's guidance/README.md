@@ -282,7 +282,7 @@ You can type `?function name()` to learn more about functions. Check the column 
 ```
 ### Importing gene set(s) of interest and conducting spatial enrichment analysis
 
-In this step, we will perform spatial enrichment analysis on the gene set(s) of interest, which may be marker gene sets of various cell types, or any gene set of interest (for example, disease related gene sets). Please provide the gene set(s) in **vector** format.
+In this step, we will perform spatial enrichment analysis on the gene set(s) of interest (a predefined gene set), which could be marker gene sets of various cell types, or any gene set of interest (for example, disease related gene sets). Please provide the gene set(s) in **vector** format.
 
 Here, we will demonstrate the process using the SpatiaE's built-in data sets. As demonstrated below, you can directly load them using `data(cell_type_marker_genes)` and `data(ALS_genes)` functions.
 
@@ -343,15 +343,15 @@ The data structure of the **cell_type_marker_genes** is shown as below (only the
 Here we will take **L6 IT CTX** cell type in the **cell_type_marker_genes** dataset as an example to demonstrate how to perform the spatial enrichment analysis.
 
 ```r
-target_geneset <- cell_type_marker_genes[cell_type_marker_genes$cluster=='L6 IT CTX',] 
+predefined_geneset <- cell_type_marker_genes[cell_type_marker_genes$cluster=='L6 IT CTX',] 
 ```
 
 According to p_val_adj sort values, the top 200 genes will be selected for the next analysis (see below for details on why the top 200 genes were chosen).
 
 ```r
-target_geneset <- target_geneset[order(target_geneset$p_val_adj),] 
-target_geneset <- target_geneset[target_geneset$p_val_adj<0.05,] 
-nrow(target_geneset) #Output the number of significant genes
+predefined_geneset <- predefined_geneset[order(predefined_geneset$p_val_adj),] 
+predefined_geneset <- predefined_geneset[predefined_geneset$p_val_adj<0.05,] 
+nrow(predefined_geneset) #Output the number of significant genes
 ```
 
 ```
@@ -359,7 +359,7 @@ nrow(target_geneset) #Output the number of significant genes
 ```
 
 ```r
-target_geneset <- target_geneset[1:200,] #Choose the top 200 marker genes as the target genes
+target_geneset <- predefined_geneset[1:200,] # Retain the top 200 most significant genes as the target gene set
 target_geneset
 ```
 
@@ -382,7 +382,7 @@ target_geneset
 <details>
   <summary>Why do we recommend the top 200 marker genes for analysis?</summary>
 
-Although the p values of significant genes are less than 0.05, if we use all significant genes for enrichment analysis, it will not only take a long time to calculate, occupy a large GPU memory, but also cause high false positives. However, few significant genes may cause information loss. After internal testings, we recommend selecting the top 100 genes (a total of fewer than 1,000 significant genes), the top 200 genes (a total of 1,000 to 5,000 significant genes), and the top 500 genes (a total of more than 5,000 significant genes) as the target genes. There are 1,907 significant genes in L6 IT CTX and we retain the top 200 genes. <br>
+Although the p values of significant genes are less than 0.05, if we use all significant genes for enrichment analysis, it will not only take a long time to calculate, occupy a large GPU memory, but also cause high false positives. However, few significant genes may cause information loss. After internal testings, we recommend selecting the top 100 genes (a total of fewer than 1,000 significant genes), the top 200 genes (a total of 1,000 to 5,000 significant genes), and the top 500 genes (a total of more than 5,000 significant genes) as the target gene set. There are 1,907 significant genes in L6 IT CTX and we retain the top 200 genes. <br>
 </details>
 <br>
 
@@ -395,14 +395,19 @@ The reason for not using a fixed p value to determine the top number is that the
 
 **How to judge which cluster(s) is the target gene set significantly enriched to?**<br>
 
-Here we define a judgment baseline, randomly sample 10,000 gene sets with the same length as the target gene set, construct their expression matrices, compare the sum of gene weighted expression between the target gene set and 10,000 random gene sets, and calculate the probability that the weighted sum of the target gene set is greater than the random gene sets.<br>
+In fact, not all genes in the target gene set are expressed in the ST data, so we need to take the intersection of the target gene set and the `delta` matrix to obtain the `target_delta` matrix.
 
 ```r
-target_delta <- delta[delta$gene %in% target_geneset$gene,] 
-target_gama <- getGama(target_delta, type = 'target') 
-random_sample_delta <- getRandomSample(delta, target_geneset$gene) 
-random_sample_gama <- getGama(random_sample_delta, type = 'random', cores = 30)
-enrichment_output <- getEnrichmentOutput(target_gama, random_sample_gama) 
+target_delta <- delta[delta$gene %in% target_geneset$gene,]
+```
+
+For which cluster(s) the target gene set is significantly enriched to, we define a judgment baseline, randomly sample 10,000 gene sets with the same length as the target gene set, construct their expression matrices, compare the sum of gene weighted expression between the target gene set and 10,000 random gene sets, and calculate the probability that the weighted sum of the target gene set is greater than the random gene sets.<br>
+
+```r
+target_gama <- getGama(target_delta, type = 'target') # Calculate the sum of weighted differential expression of target gene set
+random_sample_delta <- getRandomSample(delta, target_geneset$gene) # Construct expression matrices for randomly sampled gene sets
+random_sample_gama <- getGama(random_sample_delta, type = 'random', cores = 30) # Calculate the sum of weighted differential expression of random gene sets
+enrichment_output <- getEnrichmentOutput(target_gama, random_sample_gama) # Compute significance
 colnames(enrichment_output)<- c("frequency","possibility","pval","cluster","fdr","bonferroni","graphdata")
 ```
 You can type `?function name()` to learn more about functions. The `enrichment_output` dataframe is shown as below.
