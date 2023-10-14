@@ -202,7 +202,7 @@ The quartile is the value at the 25% (lower quartile or Q1) or 75% (upper quarti
 <details>
   <summary> Why not filter the part above the upper quartile? </summary>
 
-The upper and lower quartiles represent genes with very extreme expression. The lower quartile corresponds to genes with very low expression, or even almost no expression. The upper quartile corresponds to genes with very high expression, or even only expressed in specific cell types, which are consistent with the definition of most marker genes. Therefore, we recommend considering the lower filter limit.<br>
+The upper and lower quartiles represent genes with very extreme expression. The lower quartile corresponds to genes with very low expression, or even almost no expression. The upper quartile corresponds to genes with very high expression, or even only expressed in specific regions, which are consistent with the definition of most marker genes. Therefore, we recommend considering the lower filter limit.<br>
 </details>
 <br>
 
