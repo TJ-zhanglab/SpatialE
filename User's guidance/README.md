@@ -359,8 +359,8 @@ nrow(predefined_geneset) #Output the number of significant genes
 ```
 
 ```r
-target_geneset <- predefined_geneset[1:200,] # Retain the top 200 most significant genes as the target gene set
-target_geneset
+predefined_geneset <- predefined_geneset[1:200,] # Only retain the top 200 most significant genes
+predefined_geneset
 ```
 
 ```
@@ -382,7 +382,7 @@ target_geneset
 <details>
   <summary>Why do we recommend the top 200 marker genes for analysis?</summary>
 
-Although the p values of significant genes are less than 0.05, if we use all significant genes for enrichment analysis, it will not only take a long time to calculate, occupy a large GPU memory, but also cause high false positives. However, few significant genes may cause information loss. After internal testings, we recommend selecting the top 100 genes (a total of fewer than 1,000 significant genes), the top 200 genes (a total of 1,000 to 5,000 significant genes), and the top 500 genes (a total of more than 5,000 significant genes) as the target gene set. There are 1,907 significant genes in L6 IT CTX and we retain the top 200 genes. <br>
+Although the p values of significant genes are less than 0.05, if we use all significant genes for enrichment analysis, it will not only take a long time to calculate, occupy a large GPU memory, but also cause high false positives. However, few significant genes may cause information loss. After internal testings, we recommend selecting the top 100 genes (a total of fewer than 1,000 significant genes), the top 200 genes (a total of 1,000 to 5,000 significant genes), and the top 500 genes (a total of more than 5,000 significant genes) for the next step analyze. There are 1,907 significant genes in L6 IT CTX and we retain the top 200 genes. <br>
 </details>
 <br>
 
@@ -393,19 +393,19 @@ The reason for not using a fixed p value to determine the top number is that the
 </details>
 <br>
 
-**How to judge which cluster(s) is the target gene set significantly enriched to?**<br>
+**How to judge which cluster(s) is the predefined gene set significantly enriched to?**<br>
 
-In fact, not all genes in the target gene set are expressed in the ST data, so we need to take the intersection of the target gene set and the `delta` matrix to obtain the `target_delta` matrix.
+In fact, not all genes in the predefined gene set are expressed in the ST data, so we first take the intersection of the predefined gene set and the ST data genes to get the 'target gene set' and the 'target_delta' matrix.
 
 ```r
-target_delta <- delta[delta$gene %in% target_geneset$gene,]
+target_delta <- delta[delta$gene %in% predefined_geneset$gene,]
 ```
 
 For which cluster(s) the target gene set is significantly enriched to, we define a judgment baseline, randomly sample 10,000 gene sets with the same length as the target gene set, construct their expression matrices, compare the sum of weighted differential expression between the target gene set and 10,000 random gene sets, and calculate the probability that the weighted sum of the target gene set is greater than the random gene sets.<br>
 
 ```r
 target_gama <- getGama(target_delta, type = 'target') # Calculate the sum of weighted differential expression of target gene set
-random_sample_delta <- getRandomSample(delta, target_geneset$gene) # Construct expression matrices for randomly sampled gene sets
+random_sample_delta <- getRandomSample(delta, predefined_geneset$gene) # Construct expression matrices for randomly sampled gene sets
 random_sample_gama <- getGama(random_sample_delta, type = 'random', cores = 30) # Calculate the sum of weighted differential expression of random gene sets
 enrichment_output <- getEnrichmentOutput(target_gama, random_sample_gama) # Compute significance
 colnames(enrichment_output)<- c("frequency","possibility","pval","cluster","fdr","bonferroni","graphdata")
