@@ -288,7 +288,7 @@ Here, we will demonstrate the process using the SpatiaE's built-in data sets. As
 
 <font size=3.5>**1 cell_type_marker_genes**</font>. This data object is a dataframe that contains marker genes of two cell types: Layer6 Intra Telencephalic Isocortex(L6 IT CTX) and Oligodendrocyte (oligo), the corresponding p values and adjusted p values. It is a single cell transcriptome data of mouse brain tissue published on the [Allen Brain Map website](http://portal.brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-smart-seq). We obtainded these marker genes by using `FindAllMarkers()` function in [Seurat](https://satijalab.org/seurat/index.html).<br> 
 <br>
-<font size=3.5>**2 ALS_genes**</font>. This data object is a vector that contains 260 previously reported Amyotrophic lateral sclerosis associated genes. Please refer to **Supplementary Table 5** of SpatialE paper for detailed data sources.<br>
+<font size=3.5>**2 ALS_genes**</font>. This data object is a vector that contains 260 previously reported Amyotrophic lateral sclerosis associated genes. Please refer to **Supplementary Table 3** of SpatialE paper for detailed data sources.<br>
 
 Loading the gene set.
 ```r
