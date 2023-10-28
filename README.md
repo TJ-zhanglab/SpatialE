@@ -1,7 +1,7 @@
 # Welcome to **`SpatialE`**!
 
 <p align="center">
-  <h3 align="center">Spatial enrichment and genomic study identify NOMO1 as an amyotrophic lateral sclerosis gene</h3>
+  <h3 align="center">Spatial enrichment and genomic analyses identify NOMO1 as an amyotrophic lateral sclerosis gene</h3>
 </p>
 
 **SpatialE** is a gene set spatial enrichment tool that estimates the entropy weighted differential gene expression matrix at spatial clusters, and calculates the significance of how a predefined gene set is enriched to a spatial cluster (region) when compared to randomly sampling gene sets. We packaged it into a user-friendly generic R package. By Combing [Seurat](https://satijalab.org/seurat/index.html), we can estimate the spatial region where a gene set or cell type is enriched to.
