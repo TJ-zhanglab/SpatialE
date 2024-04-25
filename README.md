@@ -40,7 +40,7 @@ SpatialE is still undergoing development and enhancement. We welcome all feedbac
 
 ## References
 
-Will add paper link after publishing.
+Jingyan Guo, Linya You, Yu Zhou, Jiali Hu, Jiahao Li, Wanli Yang, Xuelin Tang, Yimin Sun, Yuqi Gu, Yi Dong, Xi Chen, Christine Sato, Lorne Zinman, Ekaterina Rogaeva, Jian Wang, Yan Chen, Ming Zhang, Spatial enrichment and genomic analyses reveal the link of NOMO1 with amyotrophic lateral sclerosis, Brain, 2024;, awae123, https://doi.org/10.1093/brain/awae123.
 
 ## Copyright
 
