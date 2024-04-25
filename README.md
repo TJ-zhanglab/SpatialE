@@ -4,7 +4,7 @@
   <h3 align="center">Spatial enrichment and genomic analyses reveal the link of NOMO1 with amyotrophic lateral sclerosis</h3>
 </p>
 
-**SpatialE** is a gene set spatial enrichment tool that estimates the entropy weighted differential gene expression matrix at spatial clusters, and calculates the significance of how a predefined gene set is enriched to a spatial cluster (region) when compared to randomly sampling gene sets. We packaged it into a user-friendly generic R package (installation and usage tutorials are on this GitHub), and also provided a convenient-to-use website (https://www.aibraingenomics.com/spatiale/). By Combing [Seurat](https://satijalab.org/seurat/index.html), we can estimate the spatial region where a gene set or cell type is enriched to.
+**SpatialE** is a gene set spatial enrichment tool that estimates the entropy weighted differential gene expression matrix at spatial clusters, and calculates the significance of how a predefined gene set is enriched to a spatial cluster (region) when compared to randomly sampling gene sets. We packaged it into a user-friendly generic R package (installation and usage tutorials are on this Github), and also provided a convenient-to-use website (https://www.aibraingenomics.com/spatiale/). By Combing [Seurat](https://satijalab.org/seurat/index.html), we can estimate the spatial region where a gene set or cell type is enriched to.
 
 <img src="https://github.com/TJ-zhanglab/SpatialE/blob/master/Web%20Image/SpatialE%20workflow.png" width="1000"/>
 
